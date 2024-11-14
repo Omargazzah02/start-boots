@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  
+ 
+}
+
+
+.Intro {
+  background: 
+      url('/images/haut-cadre.png') top center no-repeat; /* Image placée en haut et centrée */
+  background-size: 100% 600px; /* Image prend toute la largeur et s'ajuste en hauteur automatiquement */
+  min-height: 100vh; /* Assure que la hauteur de l'élément couvre toute la hauteur de l'écran */
+}
+
+
+
+.footer {
+  margin-top: 200px;
+  background: 
+      url('/images/bas-cadre.png') bottom center no-repeat; /* Image placée en haut et centrée */
+  background-size: 100% 600px; /* Image prend toute la largeur et s'ajuste en hauteur automatiquement */
+  min-height: 100vh; /* Assure que la hauteur de l'élément couvre toute la hauteur de l'écran */
+}
