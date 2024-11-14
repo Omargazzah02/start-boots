@@ -1,7 +1,7 @@
-import Footer from '@/app/components/Footer'
-import Main_SB_Admin from '@/app/components/Main_SB_Admin'
-import Main_SB_Admin2 from '@/app/components/Main_SB_Admin2'
-import Nav from '@/app/components/Nav'
+import Footer from '@/components/Footer'
+import Main_SB_Admin from '@/components/Main_SB_Admin'
+import Main_SB_Admin2 from '@/components/Main_SB_Admin2'
+import Nav from '@/components/Nav'
 import React from 'react'
 
 function ThemeView() {

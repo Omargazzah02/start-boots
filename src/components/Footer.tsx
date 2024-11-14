@@ -84,23 +84,23 @@ function Footer() {
 
 <br />
 
-<a href="" className='text-gray-500'>
+<a href="" className='text-gray-500 hover:underline'>
 Themes
 
 </a>
 
-<a href="" className='text-gray-500'>
+<a href="" className='text-gray-500 hover:underline'>
 Templates
 
 </a>
 
 
-<a href="" className='text-gray-500'>
+<a href="" className='text-gray-500 hover:underline'>
 Snippets
 </a>
 
 
-<a href="" className='text-gray-500'>
+<a href="" className='text-gray-500 hover:underline'>
 Guides
 
 </a>
@@ -111,33 +111,34 @@ Guides
   </div>
 
 
+
+
+
   <div className='flex flex-col'>
-    <p className=' text-gray-600'>   Products
+    <p className=' text-gray-600'>   Resources
+
         
     </p>
 
 <br />
 
-<a href="" className='text-gray-500'>
-Themes
+<a href="" className='text-gray-500 hover:underline'>
+Blog
 
 </a>
 
-<a href="" className='text-gray-500'>
-Templates
+<a href="" className='text-gray-500 hover:underline'>
+Bootstrap Resources
 
 </a>
 
 
-<a href="" className='text-gray-500'>
-Snippets
+<a href="" className='text-gray-500 hover:underline'>
+SB Angular Inspector
 </a>
 
 
-<a href="" className='text-gray-500'>
-Guides
 
-</a>
 
 
 
@@ -145,33 +146,30 @@ Guides
   </div>
 
 
+
+
   <div className='flex flex-col'>
-    <p className=' text-gray-600'>   Products
+    <p className=' text-gray-600'>   Support
+
+
         
     </p>
 
 <br />
 
-<a href="" className='text-gray-500'>
-Themes
+<a href="" className='text-gray-500 hover:underline'>
+Knowledge Base
 
 </a>
 
-<a href="" className='text-gray-500'>
-Templates
-
+<a href="" className='text-gray-500 hover:underline'>
+Custom Development
 </a>
 
 
-<a href="" className='text-gray-500'>
-Snippets
-</a>
 
 
-<a href="" className='text-gray-500'>
-Guides
 
-</a>
 
 
 
@@ -179,33 +177,40 @@ Guides
   </div>
 
 
+
+
+
   <div className='flex flex-col'>
-    <p className=' text-gray-600'>   Products
+    <p className=' text-gray-600'>   Company
+
+
+
         
     </p>
 
 <br />
 
-<a href="" className='text-gray-500'>
-Themes
+<a href="" className='text-gray-500 hover:underline'>
+About Us
 
 </a>
 
-<a href="" className='text-gray-500'>
-Templates
+<a href="" className='text-gray-500 hover:underline'>
+Privacy Policy
+</a>
 
+<a href="" className='text-gray-500 hover:underline'>
+Terms and Conditions
+</a>
+
+<a href="" className='text-gray-500 hover:underline'>
+Licenses
 </a>
 
 
-<a href="" className='text-gray-500'>
-Snippets
-</a>
 
 
-<a href="" className='text-gray-500'>
-Guides
 
-</a>
 
 
 
@@ -215,6 +220,10 @@ Guides
 
 
 
+
+
+ 
+  
 
 
 
