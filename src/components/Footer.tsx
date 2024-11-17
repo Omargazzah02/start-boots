@@ -10,29 +10,29 @@ function Footer() {
         
 <div className='pt-44  flex justify-center '>
 
-<div className=' w-[90%]    h-72 border-1 shadow-2xl  overflow-hidden flex lg:justify-between     items-start   bg-white    card-footer p-2'>
+<div className='p-2 w-[90%]    h-72 border-1 shadow-2xl  overflow-hidden flex lg:justify-between     items-start   bg-white    card-footer '>
 <div  >
 
         
-        <h1 className='text-2xl'>Want more Bootstrap themes, templates, and UI tools?
+        <h1 className='lg:text-2xl  text-xl'>Want more Bootstrap themes, templates, and UI tools?
         </h1>
 
 
             
-        <h2 className='text-xl text-gray-500'>Subscribe to get updated when new Bootstrap related products arrive!
+        <h2 className='lg:text-xl text-lg text-gray-500 '>Subscribe to get updated when new Bootstrap related products arrive!
 
 
         </h2>
 
         <div className="max-w-3xl mx-auto lg:p-4  ">
-  <div className="flex gap-1">
+  <div className="flex gap-1 ">
     <input
       type="email"
       placeholder="Email address..."
       className="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-gray-400"
     />
     <button
-      className="px-6 py-2 text-white rounded-md transition-colors bg-[#F47E74]"
+      className=" px-2 py-2 text-white rounded-md transition-colors bg-[#F47E74]"
      
     >
       Subscribe!
@@ -249,7 +249,7 @@ Licenses
 
 <p className='lg:text-sm  text-gray-500 text-center'>
 
-Website built with SB UI Kit Pro and SB Admin Pro with Illustrations by Stories by Freepik.</p> 
+</p> 
 
 <br />
  </div>

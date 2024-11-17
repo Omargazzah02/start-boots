@@ -3,9 +3,9 @@ import React from 'react'
 function Introduction() {
     return (
 <div>
-<div className='Intro flex  lg:pt-32 pt-28 px-16'>
+<div className='Intro flex  lg:pt-32 pt-28 lg:px-16 px-6'>
             <div className='lg:w-[60%] w-full'>
-                <h1 className='lg:text-4xl font-bold text-3xl '>
+                <h1 className='text-4xl font-bold  '>
                 Bootstrap themes, templates, and UI tools to help you <span className='text-[#DD3D31]'>start your next project!</span>
                 </h1>
                 <p className='text-lg'>
