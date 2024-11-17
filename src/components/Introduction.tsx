@@ -3,9 +3,9 @@ import React from 'react'
 function Introduction() {
     return (
 <div>
-<div className='Intro flex  pt-32 px-16'>
-            <div className='w-[60%]'>
-                <h1 className='text-4xl font-bold '>
+<div className='Intro flex  lg:pt-32 pt-28 px-16'>
+            <div className='lg:w-[60%] w-full'>
+                <h1 className='lg:text-4xl font-bold text-3xl '>
                 Bootstrap themes, templates, and UI tools to help you <span className='text-[#DD3D31]'>start your next project!</span>
                 </h1>
                 <p className='text-lg'>
@@ -15,7 +15,7 @@ function Introduction() {
                  </div>
             
 
-        <img src="/images/tabs-photo.svg" alt="" className='w-[40%]'  />
+        <img src="/images/tabs-photo.svg" alt="" className='w-[40%] hidden lg:block'  />
 
       
     </div>

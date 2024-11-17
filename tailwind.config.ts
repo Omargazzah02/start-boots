@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'xxs': '0.600rem',  // 6px, plus petit que text-xs (qui est 0.75rem, ou 12px)
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

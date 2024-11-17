@@ -6,12 +6,11 @@ import React from 'react'
 
 function HomeView() {
     return (
-    <div>
-        <Nav></Nav>
+    <div className='w-full'>
+   
         <Introduction></Introduction>
         <Themes></Themes>
 
-        <Footer></Footer>
 
 
     </div>
