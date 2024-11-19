@@ -241,14 +241,14 @@ Licenses
 
 
 
-<hr className="my-4 border-gray-300  mx-auto w-[90%]"  />
+<hr className="my-4 border-gray-500  mx-auto w-[90%]"  />
 
 
-<p className='   lg:text-sm text-gray-500 text-center'>Copyright © Start Bootstrap LLC 2021
+<p className='   lg:text-sm  text-gray-500 text-center '>Copyright © Start Bootstrap LLC 2021
 </p>
 
-<p className='lg:text-sm  text-gray-500 text-center'>
-
+<p className='lg:text-sm  text-gray-500 text-center '>
+Website built with SB UI Kit Pro and SB Admin Pro with Illustrations by Stories by Freepik.
 </p> 
 
 <br />

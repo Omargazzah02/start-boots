@@ -19,7 +19,7 @@ function Introduction() {
 
       
     </div>
-    <hr className="my-4 border-gray-300  mx-auto w-[90%]"  />
+    <hr className="my-4 border-gray-600  mx-auto w-[90%]"  />
     </div>
 
 

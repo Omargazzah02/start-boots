@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Themes() {
@@ -11,8 +12,8 @@ function Themes() {
 <div className='lg:w-[30%] h-44 w-[90%]  mt-48 '>
 
 
-                <img src="images/themes/sb-admin-pro.jpg" alt=""  className='rounded-3xl  shadow-md hover:shadow-lg hover:-translate-y-1 transition transform duration-300 hover:cursor-pointer ' />
-
+<Link href="/theme">                <img src="images/themes/sb-admin-pro.jpg" alt=""  className='rounded-3xl  shadow-md hover:shadow-lg hover:-translate-y-1 transition transform duration-300 hover:cursor-pointer ' />
+</Link>
             <br />
               <div className='flex justify-between '>
 
@@ -34,8 +35,8 @@ function Themes() {
             <div className='lg:w-[30%] h-44 w-[90%]  mt-48 '>
 
 
-                <img src="images/themes/freelancer.jpg" alt=""  className='rounded-3xl  shadow-md hover:shadow-lg hover:-translate-y-1 transition transform duration-300 hover:cursor-pointer ' />
-
+<Link href="/theme">                <img src="images/themes/freelancer.jpg" alt=""  className='rounded-3xl  shadow-md hover:shadow-lg hover:-translate-y-1 transition transform duration-300 hover:cursor-pointer ' />
+</Link>
             <br />
               <div className='flex justify-between '>
 
@@ -55,8 +56,9 @@ function Themes() {
                       
             <div className='lg:w-[30%] h-44 w-[90%]  mt-48 '>
 
-                <img src="images/themes/creative.jpg" alt=""  className='rounded-3xl  shadow-md hover:shadow-lg hover:-translate-y-1 transition transform duration-300 hover:cursor-pointer ' />
-   
+<Link href="/theme">
+<img src="images/themes/creative.jpg" alt=""  className='rounded-3xl  shadow-md hover:shadow-lg hover:-translate-y-1 transition transform duration-300 hover:cursor-pointer ' />
+</Link>   
             <br />
               <div className='flex justify-between '>
 
