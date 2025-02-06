@@ -26,7 +26,7 @@ function Nav() {
               <a href="#" className="text-gray-600 no-underline">Templates</a>
               <a href="#" className="text-gray-600 no-underline">Bundles</a>
               <a href="#" className="text-gray-600 no-underline">Forms</a>
-              <a href="#" className="text-gray-600 no-underline">Last version</a>
+              <a href="#" className="text-gray-600 no-underline">Omaar</a>
             </div>
           </div>
 
