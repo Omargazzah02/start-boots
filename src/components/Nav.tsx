@@ -52,7 +52,7 @@ function Nav() {
           <a href="#" className="text-gray-600 no-underline p-1">Templates</a>
           <a href="#" className="text-gray-600 no-underline p-1">Bundles</a>
           <a href="#" className="text-gray-600 no-underline p-1"></a>
-          <a href="#" className="text-gray-600 no-underline p-1">OMAR</a>
+          <a href="#" className="text-gray-600 no-underline p-1">Salah wiip</a>
 
           <br />
 
