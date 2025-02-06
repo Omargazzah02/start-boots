@@ -51,8 +51,8 @@ function Nav() {
           <a href="#" className="text-gray-600 no-underline p-1">Themes</a>
           <a href="#" className="text-gray-600 no-underline p-1">Templates</a>
           <a href="#" className="text-gray-600 no-underline p-1">Bundles</a>
-          <a href="#" className="text-gray-600 no-underline p-1">Bad</a>
-          <a href="#" className="text-gray-600 no-underline p-1">Good</a>
+          <a href="#" className="text-gray-600 no-underline p-1"></a>
+          <a href="#" className="text-gray-600 no-underline p-1">OMAR</a>
 
           <br />
 
