@@ -32,15 +32,29 @@ jobs:
 
       - name: Déployer sur le serveur
         run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 << 'EOF'
-          cd /home/ubuntu/start-boots || git clone https://github.com/Omargazzah02/start-boots.git /home/ubuntu/start-boots && cd /home/ubuntu/start-boots
-          git fetch origin main
-          git reset --hard origin/main
-          npm install
-          sudo chown -R ubuntu:ubuntu /home/ubuntu/start-boots/.next
-          sudo chmod -R 755 /home/ubuntu/start-boots/.next
-          npm run build
-          pm2 delete next-app || true
-          pm2 start npm --name "next-app" -- run start
-          pm2 save
-          EOF
+           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 << 'EOF'
+           if [ ! -d "/home/ubuntu/start-boots" ]; then
+           echo "Le dossier n'existe pas, clônage du projet..."
+           git clone https://github.com/Omargazzah02/start-boots.git /home/ubuntu/start-boots
+           fi
+           cd /home/ubuntu/start-boots
+           echo "Mise à jour du dépôt..."
+           git fetch origin main
+           git reset --hard origin/main
+           git pull origin main
+
+           echo "Installation des dépendances..."
+           npm install
+
+           echo "Modification des permissions..."
+           sudo chown -R ubuntu:ubuntu /home/ubuntu/start-boots/.next
+           sudo chmod -R 755 /home/ubuntu/start-boots/.next
+
+           echo "Construction de l'application..."
+           npm run build
+
+           echo "Redémarrage de l'application avec PM2..."
+           pm2 delete next-app || true
+           pm2 start npm --name "next-app" -- run start
+           pm2 save
+           EOF
