@@ -18,7 +18,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 51.20.107.111 >> ~/.ssh/known_hosts  # Remplace par ton IP
+          ssh-keyscan -H 51.20.107.111 >> ~/.ssh/known_hosts
 
       - name: Vérifier la connexion SSH
         run: ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 "echo 'Connexion SSH réussie'"
@@ -32,29 +32,40 @@ jobs:
 
       - name: Déployer sur le serveur
         run: |
-           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 << 'EOF'
-           if [ ! -d "/home/ubuntu/start-boots" ]; then
-           echo "Le dossier n'existe pas, clônage du projet..."
-           git clone https://github.com/Omargazzah02/start-boots.git /home/ubuntu/start-boots
-           fi
-           cd /home/ubuntu/start-boots
-           echo "Mise à jour du dépôt..."
-           git fetch origin main
-           git reset --hard origin/main
-           git pull origin main
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 << 'EOF'
+          if [ ! -d "/home/ubuntu/start-boots" ]; then
+            echo "Le dossier n'existe pas, clônage du projet..."
+            git clone https://github.com/Omargazzah02/start-boots.git /home/ubuntu/start-boots
+          fi
+          cd /home/ubuntu/start-boots
 
-           echo "Installation des dépendances..."
-           npm install
+          echo "Mise à jour du dépôt..."
+          git fetch origin main
+          git reset --hard origin/main
 
-           echo "Modification des permissions..."
-           sudo chown -R ubuntu:ubuntu /home/ubuntu/start-boots/.next
-           sudo chmod -R 755 /home/ubuntu/start-boots/.next
+          echo "Nettoyage et installation des dépendances..."
+          rm -rf .next
+          npm install
 
-           echo "Construction de l'application..."
-           npm run build
+          echo "Construction de l'application..."
+          npm run build
 
-           echo "Redémarrage de l'application avec PM2..."
-           pm2 delete next-app || true
-           pm2 start npm --name "next-app" -- run start
-           pm2 save
-           EOF
+          echo "Modification des permissions..."
+          sudo chown -R ubuntu:ubuntu /home/ubuntu/start-boots/.next
+          sudo chmod -R 755 /home/ubuntu/start-boots/.next
+
+          echo "Redémarrage de l'application avec PM2..."
+          pm2 delete next-app || true
+          pm2 start npm --name "next-app" -- run start -- -p 3000
+          pm2 save
+          EOF
+
+      - name: Vérifier le déploiement
+        run: |
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 "curl -I http://localhost:3000"
+
+      - name: Nettoyer la configuration SSH
+        run: rm -rf ~/.ssh
+
+      - name: Fin du déploiement
+        run: echo "Déploiement terminé avec succès !"
