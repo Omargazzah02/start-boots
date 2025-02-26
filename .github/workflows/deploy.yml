@@ -1,52 +1,43 @@
-name: Deploy Next.js App
+name: Deploy Next.js to Server
 
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer le code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Ajouter la clé SSH privée et configurer SSH
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 51.20.107.111 >> ~/.ssh/known_hosts  
+          ssh-keyscan -H 51.20.107.111 >> ~/.ssh/known_hosts
 
-      - name: Vérifier la connexion SSH
-        run: ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 "echo 'Connexion SSH réussie'"
-
-      - name: Corriger les permissions du dépôt
+      - name: Deploy to server
         run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 << 'EOF'
-          sudo chown -R ubuntu:ubuntu /home/ubuntu/start-boots
-          sudo chmod -R 755 /home/ubuntu/start-boots
+          ssh ubuntu@51.20.107.111 << 'EOF'
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Charger NVM si tu l'utilises
+
+            cd /home/ubuntu/start-boots
+
+            # Mettre à jour le code
+            git reset --hard
+            git pull origin main
+
+            # Installer les dépendances et builder
+            /usr/bin/npm install
+            /usr/bin/npm run build
+
+            # Démarrer avec PM2 en forçant l'environnement
+            pm2 restart npm --name "next-app" -- run start --update-env || pm2 start npm --name "next-app" -- run start --update-env
+            pm2 save
+            pm2 startup
           EOF
-
-      - name: Déployer sur le serveur
-        run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 << 'EOF'
-          cd /home/ubuntu/start-boots || git clone https://github.com/Omargazzah02/start-boots.git /home/ubuntu/start-boots && cd /home/ubuntu/start-boots
-          git fetch origin main
-          git reset --hard origin/main
-          npm install
-          sudo chown -R ubuntu:ubuntu /home/ubuntu/start-boots/.next
-          sudo chmod -R 755 /home/ubuntu/start-boots/.next
-          npm run build
-          pm2 delete next-app || true
-          pm2 restart next-app || pm2 start next-app
-          pm2 save
-          pm2 startup  
-          EOF
- 
-
-
-
-
