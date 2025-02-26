@@ -41,7 +41,7 @@ jobs:
           sudo chmod -R 755 /home/ubuntu/start-boots/.next
           npm run build
           pm2 delete next-app || true
-          pm2 restart next-app || pm2 start npm --name "next-app" -- start
+          pm2 restart next-app || pm2 start next-app
           pm2 save
           pm2 startup  
           EOF
