@@ -33,7 +33,7 @@ jobs:
       - name: Déployer sur le serveur
         run: |
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@51.20.107.111 << 'EOF'
-          cd /home/ubuntu/my-awesome-projects || git clone https://github.com/Omargazzah02/start-boots.git /home/ubuntu/start-boots && cd /home/ubuntu/start-boots
+          cd /home/ubuntu/start-boots || git clone https://github.com/Omargazzah02/start-boots.git /home/ubuntu/start-boots && cd /home/ubuntu/start-boots
           git fetch origin main
           git reset --hard origin/main
           npm install
@@ -41,7 +41,12 @@ jobs:
           sudo chmod -R 755 /home/ubuntu/start-boots/.next
           npm run build
           pm2 delete next-app || true
-          pm2 start npm --name "next-app" -- run start
+          pm2 restart npm --name "next-app" -- run start || pm2 start npm --name "next-app" -- run start
           pm2 save
+          pm2 startup  
           EOF
  
+
+
+
+
