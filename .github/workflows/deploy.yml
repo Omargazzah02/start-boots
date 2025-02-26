@@ -56,9 +56,10 @@ jobs:
 
           echo "Redémarrage de l'application avec PM2..."
           pm2 delete next-app || true
-          pm2 start npm --name "next-app" -- run start -- -p 3000
+          pm2 restart npm --name "next-app" -- run start || pm2 start npm --name "next-app" -- run start
           pm2 save
-          EOF
+          pm2 startup 
+          
 
       - name: Vérifier le déploiement
         run: |
@@ -69,3 +70,4 @@ jobs:
 
       - name: Fin du déploiement
         run: echo "Déploiement terminé avec succès !"
+
