@@ -38,8 +38,6 @@ export default function RootLayout({
       >
         {children}
 
-        <Nav></Nav>
-<Footer></Footer>
 
       </body>
 

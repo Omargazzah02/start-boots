@@ -8,12 +8,13 @@ import Form from '@/components/LoginForm'
 import React from 'react'
 import AuthForm from '@/components/LoginForm'
 import LoginForm from '@/components/LoginForm'
+import SignUpForm from '@/components/SignUpForm'
 
-function HomeView() {
+function SignUpView() {
     return (
     <div className='w-full'>
        <Nav></Nav>
-       <Event></Event>
+       <SignUpForm></SignUpForm>
     <Footer></Footer>
 
 
@@ -21,4 +22,4 @@ function HomeView() {
     )
 }
 
-export default HomeView
+export default SignUpView
