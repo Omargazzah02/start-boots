@@ -7,28 +7,45 @@
 
 
 
+.Intro {
 
-
-
-/* Assurez-vous que la page prend toute la hauteur */
-html, body {
-  height: 100%;
-}
-
-/* La classe pour votre wrapper principal qui contiendra le footer */
-.page-wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Pour que le footer reste en bas de la page */
-footer {
-  margin-top: auto;
+  background: 
+      url('/images/haut-cadre.png') top center no-repeat; /* Image placée en haut et centrée */
+  background-size: 100% 100%; /* Image prend toute la largeur et s'ajuste en hauteur automatiquement */
+  min-height: 100vh; /* Assure que la hauteur de l'élément couvre toute la hauteur de l'écran */
 }
 
 
+ 
+.footer {
+  margin-top: 200px;
+  background: 
+      url('/images/bas-cadre.png') bottom center no-repeat; /* Image placée en haut et centrée */
+  background-size: 100% 90%; /* Image prend toute la largeur et s'ajuste en hauteur automatiquement */
+  min-height: 100vh; /* Assure que la hauteur de l'élément couvre toute la hauteur de l'écran */
+}
+
+
+
+
+@media (min-width: 768px) {
+
+
+
+  .footer {
    
+    background-size: 100% 600px; /* Image prend toute la largeur et s'ajuste en hauteur automatiquement */
+
+  }
+
+  .Intro {
+
+ 
+    background-size: 100% 600px; /* Image prend toute la largeur et s'ajuste en hauteur automatiquement */
+  
+  }
+   
+}
 
 
 

@@ -1,46 +1,264 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
 
 function Footer() {
-  return (
-    <footer className="bg-white py-10 mt-auto">
-      <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center mb-6 md:mb-0">
-          <img src="/images/logo.svg" alt="Logo" className="w-24 h-auto" />
-        </div>
+    return (
 
-        {/* Liens du footer */}
-        <div className="flex flex-wrap justify-center space-x-12 text-sm font-bold mb-6 md:mb-0">
-          <Link href="/for-designers" className="no-underline text-black hover:text-gray-600">For Designers</Link>
-          <Link href="/hire-talent" className="no-underline text-black hover:text-gray-600">Hire Talent</Link>
-          <Link href="/inspiration" className="no-underline text-black hover:text-gray-600">Inspiration</Link>
-          <Link href="/advertising" className="no-underline text-black hover:text-gray-600">Advertising</Link>
-          <Link href="/blog" className="no-underline text-black hover:text-gray-600">Blog</Link>
-          <Link href="/about" className="no-underline text-black hover:text-gray-600">About</Link>
-          <Link href="/careers" className="no-underline text-black hover:text-gray-600">Careers</Link>
-          <Link href="/support" className="no-underline text-black hover:text-gray-600">Support</Link>
-        </div>
+    <div className='footer'>
 
-        {/* Réseaux sociaux avec images .jpg */}
-        <div className="flex space-x-6">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <img src="/images/twitter.jpg" alt="Twitter" className="w-8 h-8 hover:opacity-80" />
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <img src="/images/facebook.jpg" alt="Facebook" className="w-8 h-8 hover:opacity-80" />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <img src="/images/instagram.jpg" alt="Instagram" className="w-8 h-8 hover:opacity-80" />
-          </a>
-          <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">
-            <img src="/images/dribbble.jpg" alt="Dribbble" className="w-8 h-8 hover:opacity-80" />
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
+      
+
+        
+<div className='pt-44  flex justify-center '>
+
+<div className='p-2 w-[90%]    h-72 border-1 shadow-2xl  overflow-hidden flex lg:justify-between     items-start   bg-white    card-footer '>
+<div  >
+
+        
+        <h1 className='lg:text-2xl  text-xl'>Want more Bootstrap themes, templates, and UI tools?
+        </h1>
+
+
+            
+        <h2 className='lg:text-xl text-lg text-gray-500 '>Subscribe to get updated when new Bootstrap related products arrive!
+
+
+        </h2>
+
+        <div className="max-w-3xl mx-auto lg:p-4  ">
+  <div className="flex gap-1 ">
+    <input
+      type="email"
+      placeholder="Email address..."
+      className="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-gray-400"
+    />
+    <button
+      className=" px-2 py-2 text-white rounded-md transition-colors bg-[#F47E74]"
+     
+    >
+      Subscribe!
+    </button>
+
+  </div>
+
+  
+  <p className='text-gray-500 lg:text-sm  text-xxs '>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+
+</p>
+</div>
+
+
+
+            </div>
+
+
+    <img src="/images/wall-post-pana.svg" alt=""   className='w-36 object-cover hidden lg:block'/>
+
+   
+
+
+    
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div className='mt-10 flex justify-between p-9  lg:pl-24 lg:pr-24  flex-col lg:flex-row '>
+  
+
+  <div>
+    <p className='text-xl text-gray-600  font-bold'>    Start Bootstrap </p>
+
+    <p className='text-sm text-gray-500'>Free & premium UI tools to help you build better websites </p>
+    
+   <div
+   className='flex flex-row lg:w-10  w-16'>  <img src="images/twitter.png" alt=""   className='cursor-pointer hover:opacity-45'/>
+   <img src="images/github.png" alt=""   className='cursor-pointer hover:opacity-45' />
+   <img src="images/facebook.png" alt=""  className='cursor-pointer hover:opacity-45'   />
+</div>
+  </div>
+
+
+
+  <div className='flex flex-col'>
+    <p className=' text-gray-600 font-bold'>   Products
+        
+    </p>
+
+
+<a href="" className='text-gray-500  hover:underline no-underline   '>
+Themes
+
+</a>
+
+<a href="" className='text-gray-500  hover:underline no-underline  '>
+Templates
+
+</a>
+
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Snippets
+</a>
+
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Guides
+
+</a>
+
+
+
+
+  </div>
+
+
+
+
+
+  <div className='flex flex-col'>
+  <br className='lg:hidden' />
+
+    <p className=' text-gray-600 font-bold'>   Resources
+
+        
+    </p>
+
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Blog
+
+</a>
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Bootstrap Resources
+
+</a>
+
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+SB Angular Inspector
+</a>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+  <div className='flex flex-col'>
+  <br  className='lg:hidden'/>
+
+    <p className=' text-gray-600 font-bold'>   Support
+
+
+        
+    </p>
+
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Knowledge Base
+
+</a>
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Custom Development
+</a>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+  <div className='flex flex-col'>
+    <br className='lg:hidden'/>
+    <p className=' text-gray-600 font-bold'>   Company
+
+    </p>
+
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+About Us
+
+</a>
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Privacy Policy
+</a>
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Terms and Conditions
+</a>
+
+<a href="" className='text-gray-500  hover:underline no-underline '>
+Licenses
+</a>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+ 
+  
+
+
+
+
+  
+
+
+</div>
+
+
+
+<hr className="my-4 border-gray-500  mx-auto w-[90%]"  />
+
+
+<p className='   lg:text-sm  text-gray-500 text-center '>Copyright © Start Bootstrap LLC 2021
+</p>
+
+<p className='lg:text-sm  text-gray-500 text-center '>
+Website built with SB UI Kit Pro and SB Admin Pro with Illustrations by Stories by Freepik.
+</p> 
+
+<br />
+ </div>
+        
+    )
 }
 
-export default Footer;
+
+
+
+
+export default Footer
